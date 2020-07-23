@@ -1,8 +1,8 @@
 $color-text-primary: #000
 $color-text-secondary: #818181
-// $color-image-background: #e4e2e3
 $color-image-background: #fff
 $color-image-border: #eee
+$border-lines: 2px solid #0500FF
     
 .products
     width: 100%
@@ -49,10 +49,6 @@ $color-image-border: #eee
 
     background-color: $color-image-background
     border: 20px solid $color-image-border
-    // background: url("/images/disinfecator_whole_front.png")
-    // background-size: contain
-    // background-repeat: no-repeat
-    // background-position: center
 
     img
         position: absolute
@@ -65,3 +61,24 @@ $color-image-border: #eee
         object-fit: contain
 
         filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1))
+
+.products__product__info-lines__point
+    position: absolute
+    width: 10px
+    height: 10px
+
+    background-color: red
+
+.products__product--disinfecator_whole_front
+    .products__product__info-lines__point--description
+        background-color: blue
+        top: 30px
+        right: 30px
+    .products__product__info-lines__point--midpoint
+        background-color: green
+        top: 20px
+        right: 20px
+    .products__product__info-lines__point--image
+        background-color: yellow
+        top: 40px
+        right: 40px

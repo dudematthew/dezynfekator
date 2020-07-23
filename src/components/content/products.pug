@@ -2,7 +2,7 @@ block append head
     link(rel='stylesheet', href='./components/content/products.sass')
 
 mixin products(props)
-    .products__product(class= props.order === 'right' ? '' : 'products__product--reversed')
+    .products__product(class= (props.order === 'right' ? '' : 'products__product--reversed') + ("products__product--" + props.imgName) data-product-name=props.imgName)
         .products__product__descriptions
             each description in props.descriptions
                 .products__product__descriptions__description(class= props.order === 'right' ? '' : 'products__product__descriptions__description--reversed')
@@ -11,4 +11,8 @@ mixin products(props)
         .products__product__image
             img(src= props.imgSrc, alt= props.imgAlt)
         .products__product__info-lines
-            block
+            //- block
+            .products__product__info-lines__point.products__product__info-lines__point--description(data-product-dot-line-index='description')
+            .products__product__info-lines__point.products__product__info-lines__point--midpoint(data-product-dot-line-index='midpoint')
+            .products__product__info-lines__point.products__product__info-lines__point--image(data-product-dot-line-index='image')
+            .products__product__info-line

@@ -8,7 +8,7 @@ include /components/content/products-header.pug
 html
   head
     block head
-      title #{title} - Publiczny system dezynfekcji rąk
+      title Publiczny system dezynfekcji rąk
       link(href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap', rel='stylesheet')
       link(rel='stylesheet', href='styles/main.sass')
   body
@@ -19,6 +19,7 @@ html
       .products
         +products-header
         +products({
+          imgName: "disinfecator_whole_front",
           order: "right",
           imgSrc  : "/images/disinfecator_whole_front.png",
           imgAlt: "Dezynfekator",
@@ -28,6 +29,7 @@ html
           ]
         })
         +products({
+          imgName: "disinfecator_front",
           order: "left",
           imgSrc: "/images/disinfecator_front.png",
           imgAlt: "Przednia obudowa dezynfekatora",
