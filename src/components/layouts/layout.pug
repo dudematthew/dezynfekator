@@ -1,0 +1,41 @@
+include /components/header/header.pug
+include /components/content/landing.pug
+include /components/content/products-header.pug
+include /components/content/products.pug
+include /components/footer/footer.pug
+include /components/content/products-header.pug
+
+html
+  head
+    block head
+      title #{title} - Publiczny system dezynfekcji rąk
+      link(href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap', rel='stylesheet')
+      link(rel='stylesheet', href='styles/main.sass')
+  body
+    block header
+      +header
+    block content
+      +landing
+      .products
+        +products-header
+        +products({
+          order: "right",
+          imgSrc  : "/images/disinfecator_whole_front.png",
+          imgAlt: "Dezynfekator",
+          descriptions: [
+            { header: 'Nowoczesny design', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' },
+            { header: 'Najlepsze materiały', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' }
+          ]
+        })
+        +products({
+          order: "left",
+          imgSrc: "/images/disinfecator_front.png",
+          imgAlt: "Przednia obudowa dezynfekatora",
+          descriptions: [
+            { header: 'Nowatorskie rozwiązania', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' },
+            { header: 'Zautomatyzowane podzespoły', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' }
+          ]
+        })
+    block footer
+      +footer
+    block scripts

@@ -1,0 +1,15 @@
+block append head 
+    link(rel='stylesheet', href='./components/footer/footer.sass')
+
+mixin footer(props)
+    .footer
+        .footer__info
+            .footer__info__title My Long Company name
+            .footer__info__subtitle Tworzymy cośtam.
+            .footer__info__rights &copy; 2020 My long company name, wszelkie prawa zastrzeżone.
+        .footer__contact
+            .footer__contact__title Kontakt
+            .footer__contact__phone-number
+                a(href='tel:+48 000 000 000') +48 000 000 000
+            .footer__contact__email 
+                a(href='mailto: contact@mylongcompanyname.pl') contact@mylongcompanyname.pl

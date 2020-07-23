@@ -1,0 +1,14 @@
+block append head 
+    link(rel='stylesheet', href='./components/content/products.sass')
+
+mixin products(props)
+    .products__product(class= props.order === 'right' ? '' : 'products__product--reversed')
+        .products__product__descriptions
+            each description in props.descriptions
+                .products__product__descriptions__description(class= props.order === 'right' ? '' : 'products__product__descriptions__description--reversed')
+                    .products__product__descriptions__description__header #{description.header}
+                    .products__product__descriptions__description__content #{description.content}
+        .products__product__image
+            img(src= props.imgSrc, alt= props.imgAlt)
+        .products__product__info-lines
+            block

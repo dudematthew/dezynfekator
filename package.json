@@ -1,0 +1,31 @@
+{
+  "name": "dezynfekator",
+  "version": "1.0.0",
+  "description": "Website for presentation of sterilization machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudematthew/dezynfekator.git"
+  },
+  "keywords": [
+    "desinfection",
+    "website"
+  ],
+  "author": "dudematthe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudematthew/dezynfekator/issues"
+  },
+  "homepage": "https://github.com/dudematthew/dezynfekator#readme",
+  "devDependencies": {
+    "pug": "^3.0.0",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "@vizuaalog/bulmajs": "^0.11.0",
+    "bulma": "^0.9.0"
+  }
+}
