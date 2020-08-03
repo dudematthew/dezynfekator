@@ -1,4 +1,5 @@
 $color-background: rgba(46, 46, 46, 0.8)
+$color-background-active: #2E2E2E
 $color-text: #fff
 
     
@@ -14,6 +15,15 @@ $color-text: #fff
     justify-content: space-between
     padding: 0 100px
     z-index: 11
+
+.header--active
+    position: flex
+    left: 0
+    top: 0
+
+    animation-duration: 1s
+    animation-name: fadein
+    background-color: $color-background-active
 
 .header__items
     position: relative
@@ -34,3 +44,10 @@ $color-text: #fff
 .header__item--logo
     font-size: 20px
     margin-left: 0
+
+@keyframes fadein
+    0%
+      background-color: $color-background  
+        
+    100%
+        background-color: $color-background-active
