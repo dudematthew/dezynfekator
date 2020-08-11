@@ -15,20 +15,24 @@ $color-text: #fff
     justify-content: space-between
     padding: 0 100px
     z-index: 11
+    transition: background-color 1s
+
+    @media (max-width: 680px)
+        padding: 0 20px
 
 .header--active
-    position: flex
-    left: 0
+    position: fixed
     top: 0
 
-    animation-duration: 1s
-    animation-name: fadein
     background-color: $color-background-active
 
 .header__items
     position: relative
     display: flex
     justify-content: space-between
+
+    @media (max-width: 680px)
+        visibility: hidden
 
     
 .header__item
@@ -44,10 +48,7 @@ $color-text: #fff
 .header__item--logo
     font-size: 20px
     margin-left: 0
+    white-space: nowrap
 
-@keyframes fadein
-    0%
-      background-color: $color-background  
-        
-    100%
-        background-color: $color-background-active
+    @media (max-width: 680px)
+        font-size: 15px

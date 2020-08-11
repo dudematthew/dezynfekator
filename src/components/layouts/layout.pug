@@ -4,40 +4,24 @@ include /components/content/products-header.pug
 include /components/content/products.pug
 include /components/footer/footer.pug
 include /components/content/products-header.pug
+include /components/head/head.pug
 
+block variables
+
+doctype html
 html
   head
     block head
-      title Publiczny system dezynfekcji rąk
-      link(href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap', rel='stylesheet')
-      link(rel='stylesheet', href='styles/main.sass')
+      +head(headProps)
   body
     block header
-      +header
+      +header(headerProps)
     block content
-      +landing
+      +landing(contentProps)
       .products
-        +products-header
-        +products({
-          imgName: "disinfecator_whole_front",
-          order: "right",
-          imgSrc  : "/images/disinfecator_whole_front.png",
-          imgAlt: "Dezynfekator",
-          descriptions: [
-            { header: 'Nowoczesny design', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' },
-            { header: 'Najlepsze materiały', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' }
-          ]
-        })
-        +products({
-          imgName: "disinfecator_front",
-          order: "left",
-          imgSrc: "/images/disinfecator_front.png",
-          imgAlt: "Przednia obudowa dezynfekatora",
-          descriptions: [
-            { header: 'Nowatorskie rozwiązania', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' },
-            { header: 'Zautomatyzowane podzespoły', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id. Condimentum mattis pellentesque id nibh tortor.' }
-          ]
-        })
+        +products-header(productsHeaderProps)
+        +products(productsOneProps)
+        +products(productsTwoProps)
     block footer
-      +footer
+      +footer(footerProps)
     script(src='/scripts/main.js')

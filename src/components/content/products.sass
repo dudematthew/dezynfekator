@@ -10,25 +10,51 @@ $border-lines: 2px solid #0500FF
     padding: 100px 300px
     color: $color-text-primary
 
+    @media (max-width: 1412px)
+        padding: 100px 200px
+
+    @media (max-width: 1220px)
+        padding: 100px 100px
+
+    @media (max-width: 1120px)
+        padding: 100px 50px
+
+    @media (max-width: 760px)
+        padding: 100px 20px
+
+    @media (max-width: 640px)
+        padding: 100px 5px
+
+.products__product--reversed
+    flex-direction: row-reverse
+    
 .products__product
     width: 100%
     position: relative
     display: flex
-    margin: 100px 0 300px 0 
+    margin: 100px 0 300px 0
 
-.products__product--reversed
-    flex-direction: row-reverse
+    @media (max-width: 640px)
+        flex-direction: column
+
 
 .products__product__descriptions
     width: 50%
     padding: 50px
     position: relative
 
+    @media (max-width: 640px)
+        width: 100%
+        padding: 20px
+
 .products__product__descriptions__description:first-child
     margin-bottom: 75px
 
 .products__product__descriptions__description--reversed
     text-align: right
+
+    @media (max-width: 640px)
+        text-align: left
 
 .products__product__descriptions__description__header
     font-size: 20px
@@ -61,24 +87,30 @@ $border-lines: 2px solid #0500FF
         object-fit: contain
 
         filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1))
+    
+    @media (max-width: 640px)
+        width: 90%
+        padding: 20px
+        height: 300px
+        margin: 100px 10px 0 10px
 
-.products__product__info-lines__point
-    position: absolute
-    width: 10px
-    height: 10px
+// .products__product__info-lines__point
+//     position: absolute
+//     width: 10px
+//     height: 10px
 
-    background-color: red
+//     background-color: red
 
-.products__product--disinfecator_whole_front
-    .products__product__info-lines__point--description
-        background-color: blue
-        top: 15.5%
-        left: 22%
-    .products__product__info-lines__point--midpoint
-        background-color: green
-        top: 15.5%
-        left: 47%
-    .products__product__info-lines__point--image
-        background-color: yellow
-        top: -10%
-        left: 75%
+// .products__product--disinfecator_whole_front
+//     .products__product__info-lines__point--description
+//         background-color: blue
+//         top: 15.5%
+//         left: 22%
+//     .products__product__info-lines__point--midpoint
+//         background-color: green
+//         top: 15.5%
+//         left: 47%
+//     .products__product__info-lines__point--image
+//         background-color: yellow
+//         top: -10%
+//         left: 75%

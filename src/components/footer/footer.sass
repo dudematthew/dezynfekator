@@ -12,6 +12,11 @@ $color-footer-text: #fff
     background-color: $color-footer-background
     color: $color-footer-text
 
+    @media (max-width: 760px)
+        flex-direction: column
+        height: 250px
+        padding: 25px 20px
+
 .footer__info
     height: 100%
     display: flex
@@ -32,6 +37,11 @@ $color-footer-text: #fff
     align-self: flex-end
     font-size: 10px
     line-height: 12px
+
+    @media (max-width: 760px)
+        align-self: auto
+        position: absolute
+        bottom: 25px
 
 .footer__contact
     height: 100%

@@ -22,6 +22,7 @@ $color-text: #fff
     align-items: center
     justify-content: center
     z-index: 10
+    text-align: center
     
     background: linear-gradient(180deg, rgba(46, 46, 46, 0.8) 18.75%, rgba(73, 73, 73, 0.85) 100%)
     color: $color-text
@@ -34,9 +35,18 @@ $color-text: #fff
     font-weight: 500
     font-size: 32px
 
+    @media (max-width: 680px)
+        white-space: normal
+        width: calc(100% - 10px)
+        word-wrap: break-word
+        font-size: 30px
+
 .landing__subtitle
     position: absolute
     white-space: nowrap
 
     bottom: 23px
-    
+
+    @media (max-width: 680px)
+        white-space: normal
+        font-size: 13px
